@@ -1,5 +1,6 @@
 const CONTRACT_NAME = process.env.CONTRACT_NAME ||'thesis'
 
+
 function getConfig(env) {
   switch (env) {
 

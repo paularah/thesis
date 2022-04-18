@@ -26,10 +26,8 @@ export const QrScanner = () => {
     const history = useHistory()
     const onNewScanResult = (decodedText, decodedResult) => {
         setOpen(true)
-        setTimeout(() => {history.push('/provenance')}, 5000)
+        setTimeout(() => {history.push('/dashboard')}, 5000)
     }
-
-
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
           return;

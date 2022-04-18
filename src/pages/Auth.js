@@ -3,24 +3,26 @@ import { Header } from "../components/Header"
 import { Typography, Button, Box, Container, Grid, Stack } from "@mui/material"
 import {login} from '../services/auth'
 
+const BASE_URL = 'http://localhost:1234'
+
 export const AuthPage = () => {
     const handleLogin = () => {
-        login('http://localhost:1234/dashboard', 'http://localhost:1234/')
+        login(`${BASE_URL}/batch`, BASE_URL)
         //get user role and updpate the context here 
     }
 
     const handleCooperativeSignUp = () => {
-        login('http://localhost:1234/details', 'http://localhost:1234')
+        login(`${BASE_URL}/details`, BASE_URL)
         //call contract to create role with the account id 
     }
 
     const handleUnionSignUp = () => {
-        login('http://localhost:1234/details', 'http://localhost:1234')
+        login(`${BASE_URL}/details`, BASE_URL)
         //call contract to create role with the account id 
 
     }
     const handleRetailerSignUp = () => {
-        login('http://localhost:1234/details', 'http://localhost:1234')
+        login(`${BASE_URL}/detailS`, BASE_URL)
         //call contract to create role with the account id s
 
     }

@@ -12,18 +12,38 @@
  *
  */
 
-import { Context, logging, storage } from 'near-sdk-as'
+
+import { Context, logging, storage, PersistentMap } from 'near-sdk-as'
 
 
+let players = new PersistentMap<string, string>("players");
 
 //contract to keep track of account id of and roles
 
 export function createPlayer(accountId:string, role:string):void {
-
+    players.set(accountId, role)
+    logging.log("created" + role + "with account id: " + accountId)
 } 
 
+export function createCooperativeBatch():void {
 
-export function getPlayerRole(accountId:string):void {
 
+}
+
+export function createUnion():void {
+
+}
+
+export function createRetailBatch():void{
+
+}
+
+
+export function getPlayerRole(accountId:string):string | null {
+    return players.get(accountId)
+}
+
+export function getProvenance():void{
+    
 }
 
