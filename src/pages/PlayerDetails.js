@@ -1,14 +1,16 @@
 import React from 'react'
 import {Box, Typography, TextField, Grid, Button, Container, FormControlLabel, Checkbox} from '@mui/material'
 import { Header } from '../components/Header'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
 
-export const SupplyChainPlayerDetailsPage = ({role}) => {
+export const SupplyChainPlayerDetailsPage = () => {
     const history = useHistory()
+    let {role } = useParams()
+    console.log(role)
     const handleSubmit = (event) => {
         event.preventDefault()
-        history.push('/dashboard')
+        history.push('/batch')
         //call contract to save user information
     }
     const PlayerRole = role == 'cooperative' ? 'Cooperative' : role == 'union' ? 'Union': 'Retailer'

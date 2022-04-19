@@ -50,11 +50,14 @@ export const NewChainInfo = () => {
     }
     let [files, setFiles] = React.useState([]);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
         ipfsClient.add(files[0]).then(result => {
             console.log(result)
         })
+        // await window.contract.createRoe
+        history.push('/qr')
+
 
     }
     return (

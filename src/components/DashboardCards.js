@@ -57,7 +57,7 @@ export const AttachmentCard = () => {
                             <LinkRounded/>
                         </Avatar>
                         <Typography sx={{mb:2}}>FDA Certification</Typography>
-                        <Typography sx={{mb:2}} component={Link} color={theme.palette.primary.light}>View More</Typography>
+                        <a style={{color:'blue'}} href='https://www.rtda.gov.rw/fileadmin/_processed_/7/0/csm_0001_1e74cc3df8.jpg' target='_blank' >View More</a>
                     </Box>
             </CardContent>
         </Card>

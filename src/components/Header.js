@@ -2,6 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, Box, Button, Container} from '@mui/material'
 import { logout } from '../services/auth'
 import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,7 +29,7 @@ export const Header = ({headerSpacing}) =>  {
     return (
         <AppBar position='static' sx={{mb:headerSpacing ? headerSpacing : 5}}>
             <Toolbar>
-                <Typography  to='/' sx={{ flexGrow: 1, fontWeight:700, textDecoration:'none', color:'#FFFFFFF' }}>
+                <Typography variant='h5' component={Link}  to='/' sx={{ flexGrow: 1, textDecoration:'none', color:'white' }}>
                     Inzira 
                 </Typography>
               {isSignedIn == true ?<Button variant='outlined' sx={{backgroundColor:'#FFFFFF', ':hover':{

@@ -12,17 +12,17 @@ export const AuthPage = () => {
     }
 
     const handleCooperativeSignUp = () => {
-        login(`${BASE_URL}/details`, BASE_URL)
+        login(`${BASE_URL}/details/cooperative`, BASE_URL)
         //call contract to create role with the account id 
     }
 
     const handleUnionSignUp = () => {
-        login(`${BASE_URL}/details`, BASE_URL)
+        login(`${BASE_URL}/details/union`, BASE_URL)
         //call contract to create role with the account id 
 
     }
     const handleRetailerSignUp = () => {
-        login(`${BASE_URL}/detailS`, BASE_URL)
+        login(`${BASE_URL}/detailS/retailer`, BASE_URL)
         //call contract to create role with the account id s
 
     }

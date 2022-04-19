@@ -1,7 +1,8 @@
 import React from  'react'
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography, Button, Box } from '@mui/material'
 import {Header} from '../components/Header'
-import { SmallCard, LargeCard, AttachmentCard } from '../components/DashboardCards'
+import { SmallCard, LargeCard, AttachmentCard} from '../components/DashboardCards'
+import {useHistory} from 'react-router-dom'
 
 
 export const PlayerDashboardPage = () => {
@@ -23,6 +24,7 @@ export const PlayerDashboardPage = () => {
         location:'KG 43, Kigali',
         date:'12th April 2022'
     }
+    const history = useHistory()
     return (
         <React.Fragment>
             <Header headerSpacing={1}/>   
@@ -39,6 +41,9 @@ export const PlayerDashboardPage = () => {
                     <AttachmentCard/>
                 </Grid>
             </Grid>
+            <Box sx={{display:'flex', justifyContent:'center', alignItems:'center',}}>
+                <Button variant='contained' onClick={() => history.push('/')}>Go Back Home</Button>
+            </Box>
         </React.Fragment>
         
     )
