@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'thesis'
+const CONTRACT_NAME = process.env.CONTRACT_NAME ||'inzira.arah.testnet'
 
 
 function getConfig(env) {

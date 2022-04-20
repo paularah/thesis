@@ -7,7 +7,6 @@ import { useHistory, useParams } from 'react-router-dom'
 export const SupplyChainPlayerDetailsPage = () => {
     const history = useHistory()
     let {role } = useParams()
-    console.log(role)
     const handleSubmit = (event) => {
         event.preventDefault()
         history.push('/batch')
